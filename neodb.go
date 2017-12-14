@@ -23,8 +23,8 @@ func (tx *Tx) TableName() string {
 type Block struct {
 	ID         int64     `xorm:"pk autoincr"`
 	Block      int64     `xorm:"notnull index"`
-	SysFee     string    `xorm:"notnull"`
-	NetFee     string    `xorm:"notnull"`
+	SysFee     float64   `xorm:"notnull"`
+	NetFee     float64   `xorm:"notnull"`
 	CreateTime time.Time `xorm:"TIMESTAMP notnull"`
 }
 
