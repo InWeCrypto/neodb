@@ -5,7 +5,7 @@ import "time"
 // Tx .
 type Tx struct {
 	ID         int64     `xorm:"pk autoincr"`
-	TX         string    `xorm:"notnull"`
+	TX         string    `xorm:"notnull index"`
 	From       string    `xorm:"index(from_to)"`
 	To         string    `xorm:"index(from_to)"`
 	Asset      string    `xorm:"notnull"`
