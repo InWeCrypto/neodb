@@ -64,7 +64,7 @@ type Order struct {
 	Block       int64      `json:"blocks" xorm:"default (-1)"`
 	CreateTime  time.Time  `json:"createTime,omitempty" xorm:"TIMESTAMP notnull created"`
 	ConfirmTime *time.Time `json:"confirmTime,omitempty" xorm:"TIMESTAMP"`
-	Context     *string    `json:"context" xorm:"json"`
+	Context     *string    `json:"context" xorm:"TEXT"`
 }
 
 // TableName xorm table name
